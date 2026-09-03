@@ -1,0 +1,56 @@
+/* gradient border (115 degrees)  */
+/* hover state (colors flip horizontally, button grows, text changes) */
+/* center button */
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--body-bg);
+    font-family: var(--font-family);
+}
+
+:root {
+    --font-family: 'Karla', sans-serif;
+    --body-bg: #1E1F25;
+    --btn-bg: #000;
+    --btn-color: #cbcbcb;
+    --btn-color-hover: #fff;
+    --grad-color1: #eeaf61;
+    --grad-color2: #fb9861;
+    --grad-color3: #ee5d6c;
+    --grad-color4: #ce4993;
+    --grad-color5: #6a0d83;
+    --grad-color6: #092328;
+    --grad-color7: #12544f;
+    --grad-color8: #2a835f;
+    --grad-color9: #8bbb92;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.button-border{
+    background: linear-gradient(115deg, var(--grad-color6), var(--grad-color7), var(--grad-color8), var(--grad-color9));
+    padding: 2px;
+    &:hover{
+       background: linear-gradient(230deg, var(--grad-color6), var(--grad-color7), var(--grad-color8), var(--grad-color9));     
+    }
+}
+    
+.button{
+    border: none;
+    backgrond: var(--btn-bg);
+    color: var(--btn-color);
+    padding: 1em 1.5em;
+    font-family: inherit;
+    letter-spacing: .1em;
+}
+
+.button-border:hover .button
+{
+    color: var(--btn-color-hover);
+    padding: 1.1em 1.6em;
+}
