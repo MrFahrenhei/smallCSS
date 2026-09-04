@@ -1,0 +1,42 @@
+:root{
+    --color-light: lightgray;
+    --color-dark: darkgray;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.square{
+    height: 1.5em;
+    width: 1.5em;
+    background: #000;
+    margin: .5em;
+    animation: rotate infinite 1.5s;
+}
+
+.square1{
+    background: red;
+}
+.square2{
+    background: orange;
+}
+.square3{
+    background: blue;
+}
+
+@keyframes rotate{
+    from{
+       transform: rotate(-45deg); 
+    }
+    to{
+       transform: rotate(45deg); 
+    }
+}
